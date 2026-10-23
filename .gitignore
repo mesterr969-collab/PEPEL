@@ -1,0 +1,28 @@
+# Dependencies and build artifacts
+node_modules/
+dist/
+out/
+release/
+*.log
+npm-debug.log*
+yarn-debug.log*
+.DS_Store
+Thumbs.db
+
+# Local secrets / runtime state
+.env
+.env.*
+!.env.example
+*.token
+*pairing*.json
+*auth*.json
+rustplus-auth.bin
+update-settings.json
+userData/
+userdata/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
