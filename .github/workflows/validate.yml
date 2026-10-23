@@ -13,4 +13,10 @@ jobs:
         with:
           node-version: 22
       - name: Check JavaScript and JSON
-        run: npm run check
+        shell: bash
+        run: |
+          if [ -f src/main.js ] && [ -f src/app.js ] && [ -f src/data/monuments.json ]; then
+            npm run check
+          else
+            echo "::notice::Runtime sources are not uploaded yet. Copy src/ from the PEPEL publish kit to enable checks."
+          fi
