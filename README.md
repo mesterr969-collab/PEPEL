@@ -41,7 +41,7 @@
 
 ### Добавить исходный код
 
-1. Скачай и распакуй [PEPEL-GITHUB-PUBLISH-KIT.zip](https://github.com/mesterr969-collab/PEPEL) или файл набора из переписки.
+1. Скачай и распакуй приложенный в переписке архив `PEPEL-GITHUB-PUBLISH-KIT.zip`.
 2. Открой папку `PEPEL` внутри архива.
 3. Скопируй `src/`, `scripts/`, `assets/` и `package.json` в папку клонированного репозитория. Не копируй `docs/`, чтобы не перезаписать сайт уже в репозитории.
 4. Через GitHub Desktop сделай commit и нажми **Push origin**.
