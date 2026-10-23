@@ -1,0 +1,47 @@
+{
+  "name": "pepel-desktop",
+  "productName": "PEPEL",
+  "version": "2.4.7",
+  "description": "ПЕПЕЛ — неофициальный настольный набор инструментов для Rust",
+  "private": true,
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check src/main.js && node --check src/app.js && node --check src/preload.js && node --check src/rustplus-auth-preload.js && node -e \"JSON.parse(require('fs').readFileSync('src/data/monuments.json','utf8'))\"",
+    "dist:win": "electron-builder --win dir --x64 && powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/package-windows.ps1"
+  },
+  "dependencies": {
+    "@liamcottle/push-receiver": "0.0.3",
+    "@liamcottle/rustplus.js": "2.5.0",
+    "axios": "1.20.0",
+    "uuid": "9.0.1"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.pepel.desktop",
+    "productName": "PEPEL",
+    "asar": false,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json",
+      "!src/package.json"
+    ],
+    "win": {
+      "icon": "src/icon.ico",
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}
